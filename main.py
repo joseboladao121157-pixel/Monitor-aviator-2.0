@@ -13,7 +13,7 @@ def home():
     return "Servidor online 24h!"
 
 def enviar_mensagem(texto):
-    url = f"https://telegram.org{TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
     requests.post(url, data={"chat_id": CHAT_ID, "text": texto})
 
 def monitoramento():
